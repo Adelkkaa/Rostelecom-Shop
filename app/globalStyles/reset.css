@@ -1,0 +1,14 @@
+button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    list-style-type: none;
+  }

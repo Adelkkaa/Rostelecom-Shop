@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
-import './globalStyles/normalize.css'
-import './globalStyles/globals.css'
 import { Layout } from '@/components/layouts/Layout'
+
+import './globalStyles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Ростелеком',
