@@ -8,6 +8,7 @@ import { useUnit } from 'effector-react'
 import { $searchModalIsOpen } from '@/context/modals'
 import { SearchModal } from '../modules/Header/SearchModal'
 import { handleCloseSearchModal } from '@/lib/utils/common'
+import { Footer } from '../modules/Footer/Footer'
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   const isMedia800 = useMediaQuery(800)
@@ -32,7 +33,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         className={`header__search-overlay ${searchModalIsOpen ? 'overlay-active' : ''}`}
         onClick={handleCloseSearchModal}
       />
-      <div className='' />
+      <Footer />
     </>
   )
 }
