@@ -4,8 +4,14 @@
 @import url('./menu.css');
 @import url('./mobile-navbar.css');
 @import url('./catalog-menu.css');
+@import url('./search-modal.css');
+@import url('./cart-popup.css');
 
 
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Rostelecom Basis;
@@ -43,6 +49,24 @@ body::-webkit-scrollbar-thumb:hover {
 .overflow-hidden {
   overflow-y: hidden;
   padding-right: 8px;
+}
+
+.header__search-overlay {
+  background: #16181b;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.header__search-overlay.overlay-active {
+  opacity: 0.6;
+  visibility: visible;
+  z-index: 101;
 }
 
 @font-face {
