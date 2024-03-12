@@ -2,6 +2,10 @@
 @import url('./normalize.css');
 @import url('./header.css');
 @import url('./menu.css');
+@import url('./mobile-navbar.css');
+@import url('./catalog-menu.css');
+
+
 
 body {
   font-family: Rostelecom Basis;
