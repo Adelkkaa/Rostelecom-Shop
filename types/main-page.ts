@@ -9,6 +9,14 @@ export interface IHeroSlide {
 
 export type IHeroSlideTooltip = IHeroSlide
 
+export interface IMainSliderProps {
+  images: {
+    src: StaticImageData
+    id: number
+    title: string
+  }[]
+}
+
 // export interface IMainPageSectionProps {
 //   title: string
 //   goods: IProduct[]
