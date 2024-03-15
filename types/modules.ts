@@ -1,4 +1,5 @@
 import React, { MouseEventHandler } from 'react'
+import { IProduct } from './common'
 
 export interface IAccordionProps {
   children: React.ReactNode
@@ -24,4 +25,14 @@ export interface ICatalogMenuButtonProps {
 
 export interface ICatalogMenuListProps {
   items: string[]
+}
+
+export interface IProductListItemProps {
+  item: IProduct
+  title?: string
+}
+
+export interface IProductLabelProps {
+  isNew: boolean
+  isBestseller: boolean
 }

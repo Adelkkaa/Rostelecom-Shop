@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image'
-// import { IProduct } from './common'
+import { IProduct } from './common'
 
 export interface IHeroSlide {
   id?: number
@@ -17,8 +17,8 @@ export interface IMainSliderProps {
   }[]
 }
 
-// export interface IMainPageSectionProps {
-//   title: string
-//   goods: IProduct[]
-//   spinner: boolean
-// }
+export interface IMainPageSectionProps {
+  title: string
+  goods: IProduct[]
+  spinner: boolean
+}

@@ -54,8 +54,8 @@
   }
   
 .header__links__item__btn--compare::before {
-    -webkit-mask: url(/img/compare.svg) no-repeat 50% 50%;
-    mask: url(/img/compare.svg) no-repeat 50% 50%;
+    -webkit-mask: url(/img/comparison.svg) no-repeat 50% 50%;
+    mask: url(/img/comparison.svg) no-repeat 50% 50%;
   }
   
 .header__links__item__btn--cart::before {
