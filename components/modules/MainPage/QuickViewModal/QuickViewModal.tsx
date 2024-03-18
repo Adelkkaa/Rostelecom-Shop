@@ -18,6 +18,7 @@ import ProductSizesItem from '../ProductListItem/ProductSizeItem'
 import ProductSizeTableBtn from '../ProductListItem/ProductSizeTableBtn'
 import { ProductCounter } from '../ProductListItem/ProductCounter'
 import { AddToCartBtn } from '../ProductListItem/AddToCartBtn'
+import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 
 export const QuickViewModal = () => {
   const { product, selectedSize, setSelectedSize } = useCartAction()
@@ -31,6 +32,18 @@ export const QuickViewModal = () => {
   return (
     <div className={styles.modal}>
       <button className={styles.modal__close} onClick={handleCloseModal} />
+      <div className={styles.modal__actions}>
+        <ProductItemActionBtn
+          text={translations[lang].product.add_to_favorites}
+          iconClass='actions__btn_favorite'
+          withTooltip={false}
+        />
+        <ProductItemActionBtn
+          text={translations[lang].product.add_to_comparison}
+          iconClass='actions__btn_comparison'
+          withTooltip={false}
+        />
+      </div>
       <div className={styles.modal__left}>
         <QuickViewModalSlider images={images} />
       </div>
@@ -84,15 +97,6 @@ export const QuickViewModal = () => {
             </span>
             <div className={styles.modal__right__bottom__inner}>
               {!!selectedSize ? (
-                // <ProductCounter
-                //   className={`counter ${styles.modal__right__bottom__counter}`}
-                //   count={count}
-                //   totalCount={+product.inStock}
-                //   initialCount={+(existingItem?.count || 1)}
-                //   setCount={setCount}
-                //   cartItem={existingItem as ICartItem}
-                //   updateCountAsync={false}
-                // />
                 <ProductCounter
                   className={`counter ${styles.modal__right__bottom__counter}`}
                   count={0}
@@ -116,13 +120,6 @@ export const QuickViewModal = () => {
               <AddToCartBtn
                 className={styles.modal__right__bottom__add}
                 text={translations[lang].product.to_cart}
-                // handleAddToCart={addToCart}
-                // addToCartSpinner={addToCartSpinner || updateCountSpinner}
-                // btnDisabled={
-                //   addToCartSpinner ||
-                //   updateCountSpinner ||
-                //   allCurrentCartItemCount === +product.inStock
-                // }
               />
             </div>
           </div>
