@@ -1,3 +1,4 @@
+'use client'
 import { FC, useEffect } from 'react'
 import Slider from 'react-slick'
 import Link from 'next/link'

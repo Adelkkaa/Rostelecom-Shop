@@ -1,5 +1,4 @@
 'use client'
-
 import { AllLink } from '@/components/elements/AllLink/AllLink'
 import { useImagePreloader } from '@/hooks/useImagePreloader'
 import { useLang } from '@/hooks/useLang'

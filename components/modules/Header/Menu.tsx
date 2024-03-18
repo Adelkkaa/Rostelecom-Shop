@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable @next/next/no-img-element */
 import { useUnit } from 'effector-react'
 import { AnimatePresence, motion } from 'framer-motion'
