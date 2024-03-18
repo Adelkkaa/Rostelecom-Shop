@@ -1,4 +1,4 @@
-// import { CustomArrowProps } from 'react-slick'
+import { CustomArrowProps } from 'react-slick'
 
 export interface IProductSubtitleProps {
   subtitleClassName?: string
@@ -19,9 +19,9 @@ export interface IProductAvailableProps {
   inStock: number
 }
 
-// export interface IQuickViewModalSliderArrowProps extends CustomArrowProps {
-//   directionClassName: string
-// }
+export interface IQuickViewModalSliderArrowProps extends CustomArrowProps {
+  directionClassName: string
+}
 
 export interface IHeadingWithCountProps {
   count: number

@@ -6,7 +6,7 @@ import {
   openMenu,
 } from '@/context/modals'
 import { useLang } from '@/hooks/useLang'
-import { addOverflowHiddenFromBody } from '@/lib/utils/common'
+import { addOverflowHiddenToBody } from '@/lib/utils/common'
 import Link from 'next/link'
 import React from 'react'
 import { CatalogMenu } from '../Header/CatalogMenu'
@@ -15,13 +15,13 @@ export const MobileNavbar = () => {
   const { lang, translations } = useLang()
 
   const handleOpenMenu = () => {
-    addOverflowHiddenFromBody()
+    addOverflowHiddenToBody()
     openMenu()
     closeCatalogMenu()
   }
 
   const handleOpenCatalogMenu = () => {
-    addOverflowHiddenFromBody('0')
+    addOverflowHiddenToBody('0')
     openCatalogMenu()
     closeMenu()
   }

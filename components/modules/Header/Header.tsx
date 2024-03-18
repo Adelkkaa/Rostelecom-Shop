@@ -5,19 +5,19 @@ import Link from 'next/link'
 import React from 'react'
 import { Menu } from './Menu'
 import { openMenu, openSearchModal } from '@/context/modals'
-import { addOverflowHiddenFromBody } from '@/lib/utils/common'
+import { addOverflowHiddenToBody } from '@/lib/utils/common'
 import CartPopup from '../CartPopup/CartPopup'
 
 export const Header = () => {
   const { lang, translations } = useLang()
 
   const handleOpenMenu = () => {
-    addOverflowHiddenFromBody()
+    addOverflowHiddenToBody()
     openMenu()
   }
 
   const handleOpenSearchModal = () => {
-    addOverflowHiddenFromBody()
+    addOverflowHiddenToBody()
     openSearchModal()
   }
   return (

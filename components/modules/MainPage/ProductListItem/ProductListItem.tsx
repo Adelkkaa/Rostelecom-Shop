@@ -8,16 +8,24 @@ import { useLang } from '@/hooks/useLang'
 import styles from '@/styles/product-list-item/index.module.scss'
 import stylesForAd from '@/styles/ad/index.module.scss'
 import { ProductSubtitle } from '@/components/elements/ProductSubtitle/ProductSubtitle'
-import { formatPrice } from '@/lib/utils/common'
+import { addOverflowHiddenToBody, formatPrice } from '@/lib/utils/common'
 import ProductLabel from './ProductLabel'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
+import { showQuickViewModal } from '@/context/modals'
+import { setCurrentProduct } from '@/context/goods'
 
 export const ProductListItem: FC<IProductListItemProps> = ({ item, title }) => {
   const { lang, translations } = useLang()
   const isTitleForNew = title === translations[lang].main_page.new_title
   const isMedia800 = useMediaQuery(800)
+
+  const handleShowQuickViewModal = () => {
+    addOverflowHiddenToBody()
+    showQuickViewModal()
+    setCurrentProduct(item)
+  }
 
   return (
     <>
@@ -94,17 +102,11 @@ export const ProductListItem: FC<IProductListItemProps> = ({ item, title }) => {
               text={translations[lang].product.add_to_comparison}
               iconClass='actions__btn_comparison'
             />
-            {/* {!isMedia800 && (
-              <ProductItemActionBtn
-                text={translations[lang].product.quick_view}
-                iconClass='actions__btn_quick_view'
-                callback={handleShowQuickViewModal}
-              />
-            )} */}
             {!isMedia800 && (
               <ProductItemActionBtn
                 text={translations[lang].product.quick_view}
                 iconClass='actions__btn_quick_view'
+                callback={handleShowQuickViewModal}
               />
             )}
           </div>
