@@ -84,6 +84,11 @@ export const ProductListItem: FC<IProductListItemProps> = ({ item, title }) => {
               }`}
               callback={handleAddProductToFavorites}
             /> */}
+
+            <ProductItemActionBtn
+              text={translations[lang].product.add_to_favorites}
+              iconClass={`actions__btn_favorite`}
+            />
             <ProductItemActionBtn
               text={translations[lang].product.add_to_comparison}
               iconClass='actions__btn_comparison'
@@ -95,6 +100,12 @@ export const ProductListItem: FC<IProductListItemProps> = ({ item, title }) => {
                 callback={handleShowQuickViewModal}
               />
             )} */}
+            {!isMedia800 && (
+              <ProductItemActionBtn
+                text={translations[lang].product.quick_view}
+                iconClass='actions__btn_quick_view'
+              />
+            )}
           </div>
           <Link
             href={`/catalog/${item.category}/${item._id}`}
